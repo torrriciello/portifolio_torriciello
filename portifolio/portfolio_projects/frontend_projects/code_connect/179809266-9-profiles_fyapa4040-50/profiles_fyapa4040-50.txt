@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"50-13062018-124539";"";
+"REFERENCE";"FYAPA4040-50";"";
+"TraceParts.PartTitle";"40 Series Aluminium Alloy Profiles 40X40";"";
+"TraceParts.InstanceId";"50-13062018-1245395SKZ0FYSUU6086WK6V8HV1T5G";"";
+"DESIGN";"40 Series Aluminium Alloy Profiles FYAPA4040-50";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartStatusId";"";"";
+"SUPPLIER";"Dongguan Forrun Hardware Co., Ltd.";"";
+"TraceParts.PartVersion";"1.1.4";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.ClassPath";"FORRUN:50-13062018-124539";"";

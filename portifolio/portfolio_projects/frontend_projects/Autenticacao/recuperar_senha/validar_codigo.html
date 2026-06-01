@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validar Código</title>
+    <link rel="stylesheet" href="../recuperar_senha/css/validar_codigo.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1 class="title">Recuperar Senha</h1>
+      </div>
+      <form>
+        <h2>Digite o Código</h2>
+        <input
+          type="text"
+          placeholder="______"
+          maxlength="6"
+          pattern="[0-9]{6}"
+          inputmode="numeric"
+          required
+        />
+        <button type="submit">Verificar Código</button>
+      </form>
+    </main>
+  </body>
+</html>

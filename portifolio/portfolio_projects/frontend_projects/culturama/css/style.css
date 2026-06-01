@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9f9f9;
+    font-family: "Work Sans" ,sans-serif;
+}
+
+main{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 100px;
+}
+
+h1{
+    font-family: "Fjalla One", sans-serif;
+}
+
+form{
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+fieldset{
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+legend{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="tel"]
+input[type=file]{
+    margin-bottom: 0;
+}
+
+small{
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+textarea{
+    min-height: 100px;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    width: auto;
+}
+
+
+input[type="color"]{
+    width: 40px;
+    padding: 0 5px;
+}
+
