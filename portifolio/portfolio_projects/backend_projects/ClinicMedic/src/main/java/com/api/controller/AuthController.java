@@ -38,6 +38,7 @@ public class AuthController {
      * 
      * @return ResponseEntity containing the generated JWT token.
      */
+    
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody @Valid LoginData login) {
         // Creates a token object with the provided credentials for Spring Security to
