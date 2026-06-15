@@ -1,27 +1,24 @@
 import TodoContext from "./TodoContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const TODOS = "todos";
 
 export function TodoProvider({ children }) {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      description: "JSX e componentes",
-      completed: false,
-      createdAt: "2022-10-31",
-    },
-    {
-      id: 2,
-      description: "Controle de inputs e formulários controlados",
-      completed: true,
-      createdAt: "2022-10-31",
-    },
-  ]);
+  const savedTodos = localStorage.getItem(TODOS);
+
+  const [todos, setTodos] = useState(savedTodos ? JSON.parse(savedTodos) : []);
+
+  useEffect(() => {
+    localStorage.setItem(TODOS, JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (formData) => {
     const description = formData.get("description");
+    if (!description?.trim()) return;
+
     setTodos((prevState) => {
       const todo = {
-        id: prevState.length + 1,
+        id: Date.now(),
         description: description,
         completed: false,
         createdAt: new Date().toISOString(),
@@ -31,23 +28,15 @@ export function TodoProvider({ children }) {
   };
 
   const toggleTodoCompleted = (todo) => {
-    setTodos((prevState) => {
-      return prevState.map((t) => {
-        if (t.id === todo.id) {
-          return {
-            ...t,
-            completed: !t.completed,
-          };
-        }
-        return t;
-      });
-    });
+    setTodos((prevState) =>
+      prevState.map((t) =>
+        t.id === todo.id ? { ...t, completed: !t.completed } : t,
+      ),
+    );
   };
 
   const deleteTodo = (todo) => {
-    setTodos((prevState) => {
-      return prevState.filter((t) => t.id != todo.id);
-    });
+    setTodos((prevState) => prevState.filter((t) => t.id !== todo.id));
   };
 
   return (
