@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"; 
+import { useContext } from "react";
 import { ChecklistsWrapper } from "./components/ChecklistsWrapper";
 import { Container } from "./components/Container";
 import { Dialog } from "./components/Dialog";
@@ -11,20 +11,20 @@ import { ToDoForm } from "./components/ToDoForm";
 import { Button } from "./components/Button";
 import { TodoGroup } from "./components/todoGroup";
 import { TodoProvider } from "./components/TodoProvider";
+import { EmptyState } from "./components/EmptyState";
 import TodoContext from "./components/TodoProvider/TodoContext";
 
 function App() {
-  const [showDialog, setShowDialog] = useState(false);
-  const { todos, addTodo } = useContext(TodoContext);
+  const { todos, addTodo, showDialog, openFormTodoDialog, closeFormTodoDialog, selectedTodo, editTodo } = useContext(TodoContext);
 
-  const toggleDialog = () => {
-    setShowDialog(!showDialog);
-  };
-
-  const handleFormSubmit = (formData) => {
-    addTodo(formData);
-    toggleDialog();
-  };
+    const handleFormSubmit = (formData) => {
+      if (selectedTodo) {
+        editTodo(formData)
+      } else {
+        addTodo(formData)
+      }
+      closeFormTodoDialog()
+    }
 
   return (
     <main>
@@ -41,17 +41,17 @@ function App() {
             items={todos.filter((t) => !t.completed)}
           />
 
+          {todos.length == 0 && <EmptyState />}  
           <TodoGroup
             heading="Concluído"
             items={todos.filter((t) => t.completed)}
           />
 
           <Footer>
-            <Dialog isOpen={showDialog} onClose={toggleDialog}>
-              <ToDoForm onSubmit={handleFormSubmit} />
+            <Dialog isOpen={showDialog} onClose={closeFormTodoDialog}>
+              <ToDoForm onSubmit={handleFormSubmit} defaultValue={selectedTodo?.description}/>
             </Dialog>
-
-            <FabButton onClick={toggleDialog}>
+            <FabButton onClick={() => openFormTodoDialog()}>
               <IconPlus />
             </FabButton>
           </Footer>
@@ -60,5 +60,4 @@ function App() {
     </main>
   );
 }
-
 export default App;
