@@ -1,0 +1,34 @@
+.reciclapro-btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Para que ambos fiquem do mesmo tamanho na linha */
+}
+
+/* Variante Verde Sólido (Login) */
+.reciclapro-btn.primary {
+  background-color: #5cb894; /* Verde do protótipo */
+  color: #ffffff;
+  border: none;
+}
+
+.reciclapro-btn.primary:hover {
+  background-color: #4aa381; /* Tom um pouco mais escuro para o hover */
+}
+
+/* Variante Outline/Borda (Criar conta) */
+.reciclapro-btn.secondary {
+  background-color: #ffffff;
+  color: #5cb894;
+  border: 1px solid #5cb894;
+}
+
+.reciclapro-btn.secondary:hover {
+  background-color: #f0f9f5; /* Fundo verde bem clarinho no hover */
+}

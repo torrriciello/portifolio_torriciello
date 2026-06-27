@@ -1,0 +1,20 @@
+.reciclapro-input {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 1px solid #7a7a7a; /* Cor da borda fina do protótipo */
+  border-radius: 12px;       /* Cantos bem arredondados */
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  background-color: #ffffff;
+}
+
+/* Efeito sutil quando o usuário clica no campo */
+.reciclapro-input:focus {
+  border-color: #5cb894; /* Tom de verde do ReciclaPro */
+}
+
+.reciclapro-input::placeholder {
+  color: #7a7a7a;
+}
