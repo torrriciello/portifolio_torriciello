@@ -1,0 +1,109 @@
+.register-page {
+    display: flex;
+    width: 1000px;
+    height: 700px;
+    background-color: #ffffff;
+    border-radius: 40px; 
+    padding: 24px; 
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 50px auto; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.register-banner {
+    flex: 1; 
+    display: flex;
+    border-radius: 32px; 
+    overflow: hidden; 
+}
+
+.register-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.register-content {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px; 
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.register-header {
+    margin-bottom: 32px;
+}
+
+/* Ajustado para alinhar à esquerda conforme a imagem */
+.register-logo {
+    height: 60px; /* Ajustado de 185px para ficar proporcional à imagem */
+    width: auto;
+    display: block;
+    margin: 0 0 24px 0; /* Margem apenas abaixo, mantendo na esquerda */
+}
+
+.register-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0;
+}
+
+/* Garante o espaçamento entre o Form e os botões */
+.form-wrapper,
+.register-container {
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.register-actions {
+    display: flex;
+    gap: 16px; 
+    width: 100%;
+    max-width: 380px; 
+}
+
+/* Estilização para o seu componente customizado <Button> se ele renderizar uma tag <button> */
+.register-actions button,
+.register-actions > * { 
+    flex: 1; 
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    text-align: center;
+}
+
+/* Se o seu <Button> aceitar a prop variant="secondary" ou classes */
+.register-actions button:first-child,
+.register-actions [variant="secondary"] {
+    background-color: #ffffff;
+    color: #5cb894; 
+    border: 1px solid #cce7dc;
+}
+
+.register-actions button:first-child:hover,
+.register-actions [variant="secondary"]:hover {
+    background-color: #f4faf7;
+}
+
+.register-actions button:last-child,
+.register-actions button:not([variant="secondary"]) {
+    background-color: #5cb894;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(92, 184, 148, 0.2); 
+}
+
+.register-actions button:last-child:hover,
+.register-actions button:not([variant="secondary"]):hover {
+    background-color: #4da381; 
+}

@@ -1,10 +1,11 @@
-import { Login } from './pages/Login/Login';
-import { RegisterType } from './pages/RegisterType/RegisterType';
+import { Login } from './pages/Login';
+import { RegisterPrimaryData } from './pages/RegisterPrimaryData';
+import { RegisterType } from './pages/RegisterType';
+import { RegisterLocation } from './pages/RegisterLocaition';
 
 function App() {
   return (
-    // Renderizando a nova tela para testar o visual
-    <RegisterType />
+    <RegisterLocation />
   );
 }
 

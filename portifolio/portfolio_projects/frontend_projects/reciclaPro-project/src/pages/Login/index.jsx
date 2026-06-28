@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Input } from '../../components/Input/Input';
-import { Button } from '../../components/Button/Button';
+import { Input } from '../../components/Input';
+import { Button } from '../../components/Button';
 import logo from '../../assets/logo.svg'; 
 import banner from '../../assets/banner.png';  
 import './Login.css';

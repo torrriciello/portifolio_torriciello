@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Button } from '../../components/Button/Button';
+import { Button } from '../../components/Button';
 import logo from '../../assets/logo.svg';
 import banner from '../../assets/banner.png';
 import './RegisterType.css';
-import { TypeForm } from '../../components/Type/TypeForm';
+import { TypeForm } from '../../components/Type';
 
 export function RegisterType() {
     const [userType, setUserType] = useState(''); // O estado continua aqui
