@@ -19,7 +19,6 @@ export function Login() {
     <div className="login-screen-container">
       <div className="login-card-box">
         
-        {/* LADO ESQUERDO: FORMULÁRIO */}
         <div className="login-left-side">
           <div className="login-content-wrapper">
             

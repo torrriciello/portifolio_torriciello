@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button } from '../../components/Button';
+import { RegisterFormPrimaryData } from '../../components/FormRegisterPrimaryData';
 import logo from '../../assets/logo.svg';
-import banner from '../../assets/banner.png'; 
-import './registerLocation.css';
-import { FormRegisterLocation } from '../../components/FormRegisterLocation';
+import banner from '../../assets/banner.png';
+import { FormRegisterPassword } from '../../components/FormRegisterPassword';
+import './registerPassword.css';
 
-export function RegisterLocation() {
+export function RegisterPassword() {
     return (
         <div className="register-page">
             <div className="register-banner">
@@ -16,11 +17,11 @@ export function RegisterLocation() {
                 <div className="register-container-inner">
                     <div className="register-header">
                         <img src={logo} alt="Logo ReciclaPro" className="register-logo" />
-                        <h2>Olá,<br />Pronto para começar?</h2>
+                        <h2>Confirme sua senha</h2>
                     </div>
-                    
-                    <FormRegisterLocation />
-    
+
+                    <FormRegisterPassword />
+
                     <div className="register-actions">
                         <Button type="button" variant="secondary">Voltar</Button>
                         <Button type="submit">Prosseguir</Button>
@@ -28,5 +29,5 @@ export function RegisterLocation() {
                 </div>
             </div>
         </div>
-    );
+    )
 }

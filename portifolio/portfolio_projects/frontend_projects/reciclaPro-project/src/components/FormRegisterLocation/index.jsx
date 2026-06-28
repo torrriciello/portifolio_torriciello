@@ -1,13 +1,14 @@
+import { Input } from "../Input";
 import "./formRegisterLocation.css";
 
 export function FormRegisterLocation() {
     return (
         <div className="form-wrapper">
             <form onSubmit={(e) => e.preventDefault()}>
-                <input type="text" placeholder="CEP" />
+                <Input type="text" placeholder="CEP" />
 
                 <div className="form-row">
-                    <input type="text" placeholder="Rua" className="input-rua" />
+                    <Input type="text" placeholder="Rua" className="input-rua" />
                     
                     <select className="select-estado" defaultValue="">
                         <option value="" disabled hidden>Estado</option>
@@ -41,7 +42,7 @@ export function FormRegisterLocation() {
                     </select>
                 </div>
 
-                <input type="text" placeholder="Complemento" />
+                <Input type="text" placeholder="Complemento" />
             </form>
         </div>
     );
