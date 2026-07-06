@@ -19,6 +19,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 /**
  * Core User entity integrated with Spring Security's UserDetails.
  * This class handles both identity persistence and authentication authorities.
