@@ -7,7 +7,7 @@ package com.api.reciclaPro.domain.role;
  */
 public enum Erole {
 
-    ADMIN, // Full system access, managing doctors and patients
-    DOCTOR, // Access to their own schedule and patient records
-    PATIENT // Access to book appointments and view their own history
+    ADMIN, 
+    COLLECTOR, 
+    TAXPAYER 
 }
